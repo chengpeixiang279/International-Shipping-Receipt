@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/pecheng/Downloads/thermal_receipt_with_signature%20(1).html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>International Shipping Receipt</title>
+  <style>
+    /* ===== 基础热敏小票设置 ===== */
+    @media print {
+      body { margin: 0; }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      width: 80mm;            /* 80mm 热敏纸，如是 58mm 改为 58mm */
+      margin: 0 auto;
+      padding: 6mm 4mm;
+      color: #000;
+      font-size: 12px;
+      line-height: 1.4;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 14px;
+      text-align: center;
+      margin: 0 0 6px 0;
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 6px;
+      border-top: 1px dashed #000;
+      padding-top: 6px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+
+    .label {
+      white-space: nowrap;
+      color: #000;
+    }
+
+    .value {
+      text-align: right;
+      flex: 1;
+      word-break: break-all;
+    }
+
+    /* ===== 表格（物品信息） ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      font-size: 11px;
+    }
+
+    th, td {
+      padding: 2px 0;
+    }
+
+    th {
+      border-bottom: 1px solid #000;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    td {
+      border-bottom: 1px dotted #000;
+    }
+
+    .right { text-align: right; }
+
+    /* ===== 合计 ===== */
+    .total {
+      margin-top: 6px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ===== 签名区域 ===== */
+    .signature-section {
+      margin-top: 12px;
+      border-top: 1px dashed #000;
+      padding-top: 8px;
+    }
+
+    .signature-box {
+      margin-top: 10px;
+    }
+
+    .signature-line {
+      margin-top: 28px;
+      border-top: 1px solid #000;
+      text-align: center;
+      font-size: 11px;
+      padding-top: 2px;
+    }
+
+    .signature-meta {
+      margin-top: 6px;
+      font-size: 11px;
+    }
+
+    .footer {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>International Shipping Service</h1>
+
+  <!-- Sender -->
+  <div class="section">
+    <div class="section-title">Sender Information</div>
+    <div class="row"><span class="label">Name:</span><span class="value">first</span></div>
+    <div class="row"><span class="label">Type:</span><span class="value">Personal</span></div>
+    <div class="row"><span class="label">ID Type:</span><span class="value">Passport</span></div>
+    <div class="row"><span class="label">ID No:</span><span class="value">first123</span></div>
+    <div class="row"><span class="label">Phone:</span><span class="value">+66 021234567</span></div>
+    <div class="row"><span class="label">Email:</span><span class="value">keefirst@gmail.com</span></div>
+    <div class="row"><span class="label">Country:</span><span class="value">Thailand</span></div>
+    <div class="row"><span class="label">Address:</span><span class="value">410/1 ถนนสุขุมวิท, กรุงเทพฯ 10100</span></div>
+  </div>
+
+  <!-- Recipient -->
+  <div class="section">
+    <div class="section-title">Recipient Information</div>
+    <div class="row"><span class="label">Name:</span><span class="value">Haidy</span></div>
+    <div class="row"><span class="label">Type:</span><span class="value">Personal</span></div>
+    <div class="row"><span class="label">ID Type:</span><span class="value">Passport</span></div>
+    <div class="row"><span class="label">ID No:</span><span class="value">0</span></div>
+    <div class="row"><span class="label">Phone:</span><span class="value">+86 13517250495</span></div>
+    <div class="row"><span class="label">Email:</span><span class="value">testfirst@mail.com</span></div>
+    <div class="row"><span class="label">Country:</span><span class="value">China</span></div>
+    <div class="row"><span class="label">Address:</span><span class="value">Shanghai Tower, Shanghai Street, Shanghai 201401</span></div>
+  </div>
+
+  <!-- Items -->
+  <div class="section">
+    <div class="section-title">Items Information</div>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Item</th>
+          <th class="right">Qty</th>
+          <th class="right">Unit Price</th>
+          <th class="right">Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Shoe brush</td>
+          <td class="right">1</td>
+          <td class="right">4442 THB</td>
+          <td class="right">4442 THB</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Water meter</td>
+          <td class="right">1</td>
+          <td class="right">2233 THB</td>
+          <td class="right">2233 THB</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">
+      <span>Total</span>
+      <span>6675 THB</span>
+    </div>
+  </div>
+
+  <!-- Signature -->
+  <div class="signature-section">
+    <div class="section-title">Signature</div>
+
+    <div style="font-size:11px; margin-top:6px;">
+      I hereby confirm that the sender, recipient, and order information above are accurate and correct. I acknowledge that I will bear full responsibility for any issues arising from incorrect information provided.
+    </div>
+
+    <div class="signature-box">
+      <div class="signature-line">Sender Signature</div>
+    </div>
+
+    <div class="signature-box">
+      <div class="signature-line">Courier / Receiver Signature</div>
+    </div>
+
+    <div class="signature-meta">Date: ____________________</div>
+  </div>
+
+  <div class="footer">
+    Thank you for using our service
+  </div>
+
+
+
+</body></html>
